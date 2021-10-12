@@ -2,15 +2,7 @@ import _ from "lodash"
 window.onload=init;
 
 function init() {
-    var searchByName = function(items, term) {
-        if (term) {
-          return items.filter(function(ieetem) {
-            return toLower(ieetem.nom).includes(toLower(term))
-          })
-        }
-      
-        return items
-      }
+  
     new Vue({
         el: "#app",
         data: {
