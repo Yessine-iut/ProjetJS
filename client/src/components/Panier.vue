@@ -55,7 +55,7 @@
         <md-button
           style="margin-left: 10%"
           class="md-raised"
-          :disabled="page === 0"
+          :disabled="page === 1"
           @click="pagePrecedente()"
           >Précédent</md-button
         >
