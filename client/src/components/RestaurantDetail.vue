@@ -11,7 +11,7 @@
         <ul class="two">
           <li>Cuisine : {{ cuisine }}</li>
           <li>Ville : {{ borough }}</li>
-          <li>Score : {{ score }}/20</li>
+          <li>Moyenne Score : {{ score }}</li>
         </ul>
 
         <div class="three" v-if="checkVideo">
@@ -23,7 +23,7 @@
             style="padding-top: 20px; padding-bottom: 20px"
           ></video>
         </div>
-        <div class="four" id="map">
+        <div class="four" id="map" v-if="this.center.length!==0">
           <Map ref="map" />
         </div>
       </div>
@@ -94,7 +94,11 @@ export default {
             );
             this.borough = data.restaurant.borough;
             this.grades = data.restaurant.grades;
-            this.score = this.moyenneScore();
+            this.score="NaN";
+            if(this.grades===undefined){
+            this.score="NaN";
+            }else
+              this.score = this.moyenneScore();
             this.latitude = this.restaurant.address.coord[1];
             this.longitude = this.restaurant.address.coord[0];
             this.center = [this.latitude, this.longitude];
