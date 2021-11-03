@@ -19,11 +19,10 @@
             :src="video"
             controls
             poster="sintel.jpg"
-            width="400"
-            style="padding-top: 20px; padding-bottom: 20px"
+            style="padding-top: 20px; padding-bottom: 20px;height:200px"
           ></video>
         </div>
-        <div class="four" id="map" v-if="this.center.length!==0">
+        <div class="four" id="map">
           <Map ref="map" />
         </div>
       </div>
@@ -40,7 +39,7 @@
 <script>
 import Map from "./Map.vue";
 import CarteRestaurant from "./CarteRestaurant.vue";
-import axios from "axios";
+//import axios from "axios";
 import { createClient } from "pexels";
 const client = createClient(
   "563492ad6f9170000100000119c783799a2c471bb82118265933c92f"
@@ -84,7 +83,7 @@ export default {
         .then((responseJSON) => {
           responseJSON.json().then((data) => {
             this.restaurant = data.restaurant;
-            this.name = data.restaurant.name;
+            this.name = this.restaurant.name;
 
             this.cuisine = data.restaurant.cuisine;
             this.json = this.searchImages("restaurant+", 1);
@@ -94,7 +93,6 @@ export default {
             );
             this.borough = data.restaurant.borough;
             this.grades = data.restaurant.grades;
-            this.score="NaN";
             if(this.grades===undefined){
             this.score="NaN";
             }else
@@ -107,25 +105,39 @@ export default {
           });
         })
         .catch(function (err) {
-          console.log(err);
+          (err);
         });
     },
-    searchImages(keyword, page = 1) {
+    searchImages(page = 1) {
       const query = "restaurant+" + this.name;
       client.photos.search({ query, per_page: page }).then((photos) => {
         this.json = photos.photos[0].src.original;
       });
     },
-    searchVideo(keyword, page = 1) {
-      axios
+    searchVideo(page = 1) {
+       const query = "restaurant+" + this.name;
+      client.videos.search({ query, per_page: page }).then((videos) => {
+        if(videos.videos.length>0){
+          this.video=videos.videos[0].video_files[0].link;
+          this.checkVideo=true;
+        }
+      
+      });
+     /* axios
         .get(
-          `https://pixabay.com/api/videos/?page=${page}&key=23926467-1744e6f995758bd74f36d9467&q=${keyword}`
+          `https://pixabay.com/api/videos/?page=${page}&key=23926467-1744e6f995758bd74f36d9467&q=${keyword}`,
+          {
+            headers: {
+            "Access-Control-Allow-Origin" : "*",
+            "Content-type": "Application/json",
+            } 
+          }
         )
         .then((response) => {
           if (response.data.hits.length > 0)
             this.video = response.data.hits[0].videos["medium"].url;
           this.checkVideo = true;
-        });
+        });*/
     },
     moyenneScore() {
       let total = 0;
@@ -184,6 +196,7 @@ td {
   width: 33%;
   height: 33%;
   position: static;
+  z-index:0;
 }
 
 .wrapper {

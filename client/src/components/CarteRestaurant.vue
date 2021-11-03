@@ -134,6 +134,7 @@ export default {
       this.$refs.panier.calculPageMax();
       this.$refs.panier.getItemsCommande();
       this.$refs.panier.calculTotal();
+      
 
     }
    

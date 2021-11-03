@@ -46,7 +46,7 @@
         </md-table-row>
 
         <md-table-row style="border: 0px solid !important">
-          <md-table-cell md-label="Prix Total" md-sort-by="prix">
+          <md-table-cell md-label="Prix Total">
             Total : ${{ prixTotal }}
           </md-table-cell>
         </md-table-row>
@@ -131,11 +131,12 @@
 </template>
 
 <script>
+
 export default {
   name: "Panier",
   components: {},
-  data: () => ({
-    plats: [],
+   data: () => ({
+   plats: [],
     prixTotal: 0,
     show: false,
     menus: [],
@@ -162,6 +163,8 @@ export default {
       this.plats = [];
       this.menus = [];
       this.prixTotal = 0;
+      this.page=1;
+      this.pageMax=1;
     },
     openModal() {
       this.show = true;
@@ -188,10 +191,13 @@ export default {
           this.calculPageMax();
           if (this.pageMax < this.page) {
             this.page = this.pageMax;
-            console.log(this.page)
           }
           this.getItemsCommande();
           this.calculTotal();
+          if(this.plats.length+this.menus.length===0){
+            this.page=1;
+            this.pageMax=1;
+         }
           break;
         }
       }
@@ -209,8 +215,13 @@ export default {
             }
             this.getItemsCommande();
             this.calculTotal();
+            if(this.plats.length+this.menus.length===0){
+            this.page=1;
+            this.pageMax=1;
+          }
             break;
           }
+
         }
         if (compteur === 3) {
           this.menus.splice(i, 1);
@@ -220,6 +231,10 @@ export default {
           }
           this.getItemsCommande();
           this.calculTotal();
+        if(this.plats.length+this.menus.length===0){
+            this.page=1;
+            this.pageMax=1;
+         }
           break;
         }
       }
@@ -250,6 +265,7 @@ export default {
           j++;
         }
       }
+   
     },
   },
 };
@@ -322,8 +338,6 @@ input:valid {
   margin-right: auto;
 }
 .modal {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: fixed;
   top: 0;
   right: 0;
@@ -368,6 +382,7 @@ input:valid {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    height:400px;
   }
 
   &__footer {

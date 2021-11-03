@@ -1,8 +1,6 @@
 <template>
  <div style="height: 200px; width:300px;">
-    <div class="info" >
-      <span>Coordonnées: {{ center }}</span>
-    </div>
+   
     <l-map
       :zoom="zoom"
       :center="center"
