@@ -6,7 +6,7 @@ Avant de commencer importer le fichier plats.json sur mongoDB -> https://github.
 
 ## Ergonomie
 
-On a utilisé vue-material pour que le site soit plus érgonome.
+On a utilisé vue-material pour que le site soit plus ergonome.
 
 ## Les informations du restaurant
 
