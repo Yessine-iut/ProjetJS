@@ -1,0 +1,82 @@
+[{
+  "_id": {
+    "$oid": "617670673eb3649eabc1c878"
+  },
+  "nom": "Couscous",
+  "type": "Plat du jour",
+  "description": "Plat basé de viandes de boeuf halal et de légumes",
+  "prix": 15,
+  "urlimage": "https://assets.afcdn.com/recipe/20200828/113350_w1024h576c1cx2880cy1920.jpg"
+},{
+  "_id": {
+    "$oid": "617670673eb3649eabc1c879"
+  },
+  "nom": "Aumônière de saumon",
+  "type": "Entrée",
+  "description": "Entrée à base de saumon",
+  "prix": 5,
+  "urlimage": "https://resize-elle.ladmedia.fr/r/300,386,center-middle,forcey,ffffff/img/var/plain_site/storage/images/elle-a-table/recettes-de-cuisine/aumoniere-de-saumon-2075180/21942312-5-fre-FR/Aumoniere-de-saumon.jpg"
+},{
+  "_id": {
+    "$oid": "617670673eb3649eabc1c87a"
+  },
+  "nom": " Ceviche de loup ",
+  "type": "Entrée",
+  "description": "Entrée à base de légumes",
+  "prix": 6,
+  "urlimage": "https://cdn-elle.ladmedia.fr/var/plain_site/storage/images/elle-a-table/recettes-de-cuisine/ceviche-de-loup-2948930/54404470-4-fre-FR/Ceviche-de-loup.jpg"
+},{
+  "_id": {
+    "$oid": "617670673eb3649eabc1c87b"
+  },
+  "nom": "Crème de brocoli légère aux noisettes ",
+  "type": "Entrée",
+  "description": "Crème de brocoli",
+  "prix": 3,
+  "urlimage": "https://cdn-elle.ladmedia.fr/var/plain_site/storage/images/elle-a-table/recettes-de-cuisine/creme-de-brocoli-legere-aux-noisettes-3008665/57171483-1-fre-FR/Creme-de-brocoli-legere-aux-noisettes.jpg"
+},{
+  "_id": {
+    "$oid": "617670673eb3649eabc1c87c"
+  },
+  "nom": "Pâte bolognaise ",
+  "type": "Plat du jour",
+  "description": "Pâte à la sauce tomate et viande hachée",
+  "prix": 9,
+  "urlimage": "https://www.programme-malin.com/wp-content/uploads/2020/09/P%C3%A2tes-%C3%A0-la-bolognaise.jpg"
+},{
+  "_id": {
+    "$oid": "617670673eb3649eabc1c87d"
+  },
+  "nom": "Sushi ",
+  "type": "Plat du jour",
+  "description": "Un vrai faux-classique, inattendu mais familier qui pourrait sortir tout droit d'un Tea Time à Connaught. ",
+  "prix": 18,
+  "urlimage": "https://fac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Ffac.2F2020.2F05.2F27.2F5527c3b7-7b62-47f1-97ff-d60d63e5b276.2Ejpeg/410x230/quality/80/crop-from/center/comment-reussir-ses-sushis-maison-nos-secrets-et-recettes.jpeg"
+},{
+  "_id": {
+    "$oid": "617670673eb3649eabc1c87e"
+  },
+  "nom": "Gâteau basque cerise",
+  "type": "Déssert",
+  "description": " Une recette traditionnelle à customiser à loisirs en variant le fourrage : confitures, coulis, comptes, nutella...",
+  "prix": 3,
+  "urlimage": "https://www.regal.fr/sites/art-de-vivre/files/r71_gateau-basque-cerises_jbh.jpg"
+},{
+  "_id": {
+    "$oid": "617c4719ed013d4bb2902945"
+  },
+  "nom": "Tarte aux pommes",
+  "type": "Déssert",
+  "description": "Tarte ayant 7 pommes",
+  "prix": 9,
+  "urlimage": "https://assets.afcdn.com/recipe/20200306/108892_w1024h1024c1cx540cy960.webp"
+},{
+  "_id": {
+    "$oid": "617c4719ed013d4bb2902946"
+  },
+  "nom": "Eclair aux chocolats",
+  "type": "Déssert",
+  "description": "Déssert aux chocolats fondant",
+  "prix": 5,
+  "urlimage": "https://static.750g.com/images/600-600/c727cfc5240b2ac4e92882acf519543d/eclairs-au-chocolat.jpg"
+}]
